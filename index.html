@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>My News</title>
+        <style onload="fun()">
+            body{
+                background-image:linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.7)),url("images/background.jpg");
+                background-size:cover;
+                color:white;
+                margin: 0;
+                height: 100vh;
+                display: grid;
+                place-items: center;
+            }
+            .element {
+                
+                color: white;
+                border-radius: 8px;
+                width: 50%;
+                display: grid;
+                place-items: center;
+                font-size: 60px;
+            }
+            .flip-scale-down-diag-2 {
+                animation: flip-scale-down-diag-2 2s linear both;
+                }
+            @keyframes flip-scale-down-diag-2 {
+                0% {
+                    transform: scale(1) rotate3d(-1, -1, -1, -180deg);
+                    }
+                    50% {
+                    transform: scale(0.4) rotate3d(-1, 1, 0, -90deg);
+                    }
+                    100% {
+                    transform: scale(1) rotate3d(-1, 1, 0, 0deg);
+                    }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="element">
+            <h1 style="text-decoration: underline; text-decoration-color: red;">My News</h1>
+          </div>
+          <script>
+              function fun(){
+                document.querySelector(".element").classList.add("flip-scale-down-diag-2")
+                setTimeout(function(){ window.location.href = 'final_page.html';},4000);
+              }
+              
+          </script>
+    </body>
+</html>
